@@ -35,8 +35,9 @@
 
         .team-section {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
 
         .team-member {
@@ -44,8 +45,9 @@
             color: white;
             padding: 20px;
             border-radius: 8px;
-            width: 18%;
+            width: 18%; /* Make the width of each team member 18% to fit 5 side by side */
             text-align: center;
+            margin-bottom: 20px;
         }
 
         h2 {
@@ -58,6 +60,13 @@
             padding: 10px 0;
             text-align: center;
             margin-top: 20px;
+        }
+
+        /* Media Query for mobile devices */
+        @media (max-width: 768px) {
+            .team-member {
+                width: 100%; /* Make team member take full width on small screens */
+            }
         }
     </style>
 </head>
