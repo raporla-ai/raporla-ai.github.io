@@ -30,8 +30,8 @@
         }
 
         .header-subtitle {
-            font-size: 1em;
-            margin: 2px 0;
+            font-size: 1.2em;
+            margin: 5px 0;
         }
 
         .container {
@@ -123,18 +123,30 @@
             color: #2c2d61;
         }
 
+        /* Alt çizgiyi kaldıran stil */
+        .item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .item a:hover {
+            text-decoration: none;
+        }
+
         @media (max-width: 768px) {
-            .item {
-                width: 100%;
-                padding: 5px;
+            /* Sadece raporlarda scroll olsun */
+            .section-wrapper:first-of-type {
+                overflow-x: auto;
+            }
+
+            /* Team members yanyana scroll edilsin */
+            .section-wrapper:last-of-type {
+                overflow-x: auto;
+                flex-direction: row;
             }
 
             h2 {
                 font-size: 1.8em;
-            }
-
-            .section-wrapper {
-                flex-direction: column;
             }
 
             .project-info {
@@ -154,7 +166,7 @@
                 font-size: 0.8em;
             }
 
-            /* Show the scroll message only on mobile */
+            /* Scroll message is only visible on mobile */
             .scroll-message {
                 display: block;
             }
@@ -164,7 +176,7 @@
 <body>
 
     <header>
-        <h1 class="header-title">Raporla.ai</h1>
+        <h1 class="header-title">RAPORLA</h1>
         <p class="header-subtitle">Senior Design Project by BİTİR.İO</p>
     </header>
 
@@ -174,37 +186,35 @@
         <p class="scroll-message">Scroll to see more →</p>
         <div class="section-wrapper">
             <div class="section-content">
-                
                 <div class="item bouncy-report">
-                    <a href="RAPORLA-AI.GITHUB.IO/BİTİRİO_Project_Information_Form.pdf" download>
+                    <a href="https://github.com/raporla-ai/raporla-ai.github.io/raw/main/B%C4%B0T%C4%B0R%C4%B0O_Project_Information_Form.pdf" download>
                         <img src="finished-report.png" alt="Project Information Form">
                         <h3>Project Information Form</h3>
                     </a>
-                </div>                
-
+                </div>
                 <div class="item">
                     <img src="unfinished-report.png" alt="Report 2">
-                    <h3 class="unfinished-report-title">Report</h3>
+                    <h3 class="unfinished-report-title">Report #2</h3>
                 </div>
                 <div class="item">
                     <img src="unfinished-report.png" alt="Report 3">
-                    <h3 class="unfinished-report-title">Report</h3>
+                    <h3 class="unfinished-report-title">Report #3</h3>
                 </div>
                 <div class="item">
                     <img src="unfinished-report.png" alt="Report 4">
-                    <h3 class="unfinished-report-title">Report</h3>
+                    <h3 class="unfinished-report-title">Report #4</h3>
                 </div>
                 <div class="item">
                     <img src="unfinished-report.png" alt="Report 5">
-                    <h3 class="unfinished-report-title">Report</h3>
+                    <h3 class="unfinished-report-title">Report #5</h3>
                 </div>
             </div>
         </div>
 
         <div class="project-info">
-            <h2 class="project-info-header">About Raporla.ai</h2>
+            <h2 class="project-info-header">About RAPORLA</h2>
             <p>
-                Raporla.ai is an AI-driven solution designed to facilitate the reporting process for doctors. 
+                Raporla is an AI-driven solution designed to facilitate the reporting process for doctors. 
                 The system utilizes speech-to-text technology fine-tuned specifically for Turkish doctors,
                 automating and streamlining the report creation process. Also, the system assists doctors 
                 in preliminary diagnosis by checking medical database articles and patient reports that 
@@ -240,7 +250,7 @@
     </div>
 
     <div class="footer">
-        <p>&copy; 2024 Raporla.ai</p>
+        <p>&copy; 2024 Raporla</p>
     </div>
 
 </body>
