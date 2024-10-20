@@ -68,6 +68,7 @@
             justify-content: center;
             margin-top: 20px;
             overflow-x: auto;
+            scroll-snap-type: x mandatory;
         }
 
         .section-content {
@@ -84,6 +85,7 @@
             width: 250px;
             text-align: center;
             flex-shrink: 0;
+            scroll-snap-align: start;
         }
 
         .item img {
@@ -131,14 +133,18 @@
             text-decoration: none;
         }
 
-        @media (max-width: 768px) {
-            .section-wrapper:first-of-type {
-                overflow-x: auto;
-            }
+        .team-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
 
-            .section-wrapper:last-of-type {
-                overflow-x: auto;
-                flex-direction: row;
+        @media (max-width: 768px) {
+            
+            .team-wrapper {
+                flex-direction: column;
+                align-items: center;
             }
 
             h2 {
@@ -218,28 +224,26 @@
         </div>
 
         <h2>Meet the Team</h2>
-        <div class="section-wrapper">
-            <div class="section-content">
-                <div class="item">
-                    <img src="team-member-1.png" alt="Ali Cevat Erçal">
-                    <h3>Ali Cevat Erçal</h3>
-                </div>
-                <div class="item">
-                    <img src="team-member-2.png" alt="Kerim Eren">
-                    <h3>Kerim Eren</h3>
-                </div>
-                <div class="item">
-                    <img src="team-member-3.png" alt="Ömer Amir Akdağ">
-                    <h3>Ömer Amir Akdağ</h3>
-                </div>
-                <div class="item">
-                    <img src="team-member-4.png" alt="Göktuğ Serdar Yıldırım">
-                    <h3>Göktuğ Serdar Yıldırım</h3>
-                </div>
-                <div class="item">
-                    <img src="team-member-5.png" alt="Efe Tokar">
-                    <h3>Efe Tokar</h3>
-                </div>
+        <div class="team-wrapper">
+            <div class="item">
+                <img src="team-member-1.png" alt="Ali Cevat Erçal">
+                <h3>Ali Cevat Erçal</h3>
+            </div>
+            <div class="item">
+                <img src="team-member-2.png" alt="Kerim Eren">
+                <h3>Kerim Eren</h3>
+            </div>
+            <div class="item">
+                <img src="team-member-3.png" alt="Ömer Amir Akdağ">
+                <h3>Ömer Amir Akdağ</h3>
+            </div>
+            <div class="item">
+                <img src="team-member-4.png" alt="Göktuğ Serdar Yıldırım">
+                <h3>Göktuğ Serdar Yıldırım</h3>
+            </div>
+            <div class="item">
+                <img src="team-member-5.png" alt="Efe Tokar">
+                <h3>Efe Tokar</h3>
             </div>
         </div>
     </div>
