@@ -108,6 +108,13 @@
             margin-top: 20px;
         }
 
+        .scroll-message {
+            display: none;
+            text-align: center;
+            font-size: 0.9em;
+            color: #2c2d61;
+        }
+
         @keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
@@ -131,10 +138,14 @@
 
         @media (max-width: 768px) {
 
+            .scroll-message {
+                display: block;
+            }
+            
             .header-title{
                 size: 3em;
             }
-            
+
             .team-wrapper {
                 flex-direction: column;
                 align-items: center;
@@ -174,6 +185,7 @@
     <div class="container">
 
         <h2>Project Reports</h2>
+        <p class="scroll-message">Scroll to see more →</p>
         <div class="section-wrapper">
             <div class="section-content">
                 <div class="item bouncy-report">
