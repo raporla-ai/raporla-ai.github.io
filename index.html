@@ -34,6 +34,7 @@
             margin: 5px 0;
         }
 
+
         .container {
             width: 100%;
             padding: 0 10px;
@@ -44,8 +45,13 @@
             background: #2c2d61;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin: 20px 60px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-top: 20px;
+            margin-left: 60px;
+            margin-right: 60px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -68,7 +74,6 @@
             justify-content: center;
             margin-top: 20px;
             overflow-x: auto;
-            scroll-snap-type: x mandatory;
         }
 
         .section-content {
@@ -85,7 +90,6 @@
             width: 250px;
             text-align: center;
             flex-shrink: 0;
-            scroll-snap-align: start;
         }
 
         .item img {
@@ -117,20 +121,10 @@
             animation: bounce 0.5s ease;
         }
 
-        .scroll-message {
-            display: none;
-            text-align: center;
-            font-size: 0.9em;
-            color: #2c2d61;
-        }
-
-        .item a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .item a:hover {
-            text-decoration: none;
+        .title-image {
+            margin-top: 30px;
+            max-width: 600px; 
+            height: auto; 
         }
 
         .team-wrapper {
@@ -141,14 +135,13 @@
         }
 
         @media (max-width: 768px) {
-            
-            .header-title{
-                font-size: large;
-            }
-            
             .team-wrapper {
                 flex-direction: column;
                 align-items: center;
+            }
+            .item {
+                width: 100%;
+                padding: 5px;
             }
 
             h2 {
@@ -164,25 +157,12 @@
                 padding: 20px 0;
             }
 
-            .header-title {
-                font-size: 2em;
-            }
-
-            .header-subtitle {
-                font-size: 0.8em;
-            }
-
-            .scroll-message {
-                display: block;
+            .title-image {
+                max-width: 300px;
             }
         }
+
     </style>
-    <script>
-        window.onload = function() {
-            const sectionWrapper = document.querySelector('.section-wrapper');
-            sectionWrapper.scrollLeft = 0;
-        }
-    </script>
 </head>
 <body>
 
@@ -194,7 +174,6 @@
     <div class="container">
 
         <h2>Project Reports</h2>
-        <p class="scroll-message">Scroll to see more →</p>
         <div class="section-wrapper">
             <div class="section-content">
                 <div class="item bouncy-report">
@@ -223,13 +202,13 @@
         </div>
 
         <div class="project-info">
-            <h2 class="project-info-header">About Raporla.ai</h2>
+            <h2 class="project-info-header">About RAPORLA</h2>
             <p>
-                Raporla.ai is an AI-driven solution designed to facilitate the reporting process for doctors. 
+                Raporla is an AI-driven solution designed to facilitate the reporting process for doctors. 
                 The system utilizes speech-to-text technology fine-tuned specifically for Turkish doctors,
-                automating and streamlining the report creation process. Also, the system assists doctors 
-                in preliminary diagnosis by checking medical database articles and patient reports that 
-                are relevant to the generated report.
+                automating and streamlining the report creation process. Also the system will assist 
+                doctors in preliminary diagnosis through checking medical database articles and patient 
+                reports that are relevant to the generated report.
             </p>
         </div>
 
@@ -259,7 +238,7 @@
     </div>
 
     <div class="footer">
-        <p>&copy; 2024 Raporla.ai</p>
+        <p>&copy; 2024 Raporla</p>
     </div>
 
 </body>
