@@ -34,32 +34,22 @@
         .header-subtitle {
             font-size: 1.2em;
             margin: 5px 0;
-            /* Add some bottom margin to space it from the new link */
             margin-bottom: 15px;
-            /* Adjust as needed */
         }
 
         .website-link-container {
             margin-top: 10px;
-            /* Space above the link */
             font-size: 1.1em;
-            /* Adjust size as desired */
         }
 
         .website-link {
             color: #2c2d61;
-            /* Match your header text color */
             text-decoration: none;
-            /* Remove underline by default */
             font-weight: 600;
-            /* Make it slightly bolder */
             padding: 5px 10px;
             border: 1px solid #2c2d61;
-            /* Optional: add a border */
             border-radius: 5px;
-            /* Optional: rounded corners for the border */
             transition: background-color 0.3s ease, color 0.3s ease;
-            /* Smooth transition for hover */
         }
 
 
@@ -97,36 +87,50 @@
             color: white;
         }
 
+        /* Styles for the Report Section Wrapper */
         .section-wrapper {
             display: flex;
             justify-content: center;
             margin-top: 20px;
-            overflow-x: auto;
         }
 
+        /* Styles for the Report Section Content (flex container for report items) */
         .section-content {
             display: flex;
-            gap: 10px;
-            flex-wrap: nowrap;
+            gap: 10px; /* Default gap for desktop */
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .item {
             background-color: transparent;
             color: #2c2d61;
-            padding: 20px;
+            padding: 20px; /* Default padding */
             border-radius: 8px;
-            width: 250px;
+            width: 250px; /* Default width */
             text-align: center;
             flex-shrink: 0;
+        }
+
+        /* Specific adjustments for report items for desktop */
+        .section-content .item {
+            width: 150px; /* Reduced width for report items to fit 6 */
+            padding: 10px; /* Adjusted padding for smaller report items */
         }
 
         .item img {
             width: 100%;
             border-radius: 50%;
             height: auto;
-            max-width: 120px;
+            max-width: 120px; /* Default max-width for images in items */
             margin-bottom: 10px;
         }
+
+        /* Specific icon size for report items */
+        .section-content .item img {
+            max-width: 90px; /* Smaller icons for report items */
+        }
+
 
         .footer {
             background-color: white;
@@ -177,12 +181,25 @@
                 display: block;
             }
 
+            /* Mobile: Reduce whitespace between stacked report items */
+            .section-content {
+                gap: 5px; /* Smaller gap for mobile */
+            }
+
             .team-wrapper {
                 flex-direction: column;
                 align-items: center;
+                gap: 5px;
             }
 
+            /* General item styling for mobile */
             .item {
+                width: 100%;
+                padding: 5px;
+            }
+            
+            /* Ensure report items also follow general mobile item styling */
+            .section-content .item {
                 width: 100%;
                 padding: 5px;
             }
@@ -199,7 +216,6 @@
             .footer {
                 padding: 20px 0;
             }
-
         }
     </style>
 </head>
@@ -209,8 +225,6 @@
     <header>
         <h1 class="header-title">Raporla.ai</h1>
         <p class="header-subtitle">Senior Design Project</p>
-        <!-- ADDED SECTION FOR WEBSITE LINK -->
-
     </header>
 
     <div class="project-info">
@@ -225,66 +239,61 @@
     </div>
 
     <header>
-    <p class="website-link-container">
-        <a href="https://raporla-ai.com" target="_blank" rel="noopener noreferrer" class="website-link">
-            Visit Our Website: raporla-ai.com
-        </a>
-    </p>
+        <p class="website-link-container">
+            <a href="https://raporla-ai.com" target="_blank" rel="noopener noreferrer" class="website-link">
+                Visit Our Website: raporla-ai.com
+            </a>
+        </p>
     </header>
 
     <div class="container">
 
         <h2>Project Reports</h2>
-        <p class="scroll-message">Scroll to see more →</p>
+        <p class="scroll-message">Scroll to see more →</p> <!-- Re-added this line -->
         <div class="section-wrapper">
             <div class="section-content">
                 <div class="item bouncy-report">
                     <a href="https://github.com/raporla-ai/raporla-ai.github.io/raw/main/B%C4%B0T%C4%B0R%C4%B0O_Project_Information_Form.pdf"
-                        download>
+                        target="_blank" rel="noopener noreferrer">
                         <img src="finished-report.png" alt="Project Information Report">
                         <h3>Project Information Report</h3>
                     </a>
                 </div>
                 <div class="item bouncy-report">
                     <a href="https://github.com/raporla-ai/raporla-ai.github.io/raw/main/T2417_Project_Specification_Document.pdf"
-                        download>
+                        target="_blank" rel="noopener noreferrer">
                         <img src="finished-report.png" alt="Project Specification Report">
                         <h3>Project Specification Report</h3>
                     </a>
                 </div>
                 <div class="item bouncy-report">
                     <a href="https://github.com/raporla-ai/raporla-ai.github.io/raw/main/T2417_Analysis_and_Requirements_Report.pdf"
-                        download>
+                        target="_blank" rel="noopener noreferrer">
                         <img src="finished-report.png" alt="Analysis & Requirements Report">
                         <h3>Analysis & Requirements Report</h3>
                     </a>
                 </div>
-                <!-- REPLACED Report #4 -->
                 <div class="item bouncy-report">
                     <a href="https://github.com/raporla-ai/raporla-ai.github.io/raw/main/CS492%20Detailed%20Design%20Report.pdf"
-                        download>
+                        target="_blank" rel="noopener noreferrer">
                         <img src="finished-report.png" alt="Detailed Design Report">
                         <h3>Detailed Design Report</h3>
                     </a>
                 </div>
-                <!-- REPLACED Report #5 -->
                 <div class="item bouncy-report">
                     <a href="https://github.com/raporla-ai/raporla-ai.github.io/raw/main/CS492%20Final%20Report.pdf"
-                        download>
+                        target="_blank" rel="noopener noreferrer">
                         <img src="finished-report.png" alt="Final Report">
                         <h3>Final Report</h3>
                     </a>
                 </div>
-
                 <div class="item bouncy-report">
-                    <a href="https://github.com/raporla-ai/raporla-ai.github.io/raw/main/CS492%20Final%20Report.pdf"
-                        download>
-                        <img src="finished-report.png" alt="Final Report">
+                    <a href="https://github.com/raporla-ai/raporla-ai.github.io/raw/main/CS492%20Final%20Presentation.pdf"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="finished-report.png" alt="Final Presentation">
                         <h3>Final Presentation</h3>
                     </a>
                 </div>
-                <!-- If you have more reports to add, you can add more blocks here -->
-                <!-- Or, if you had more placeholders, you could replace them -->
             </div>
         </div>
 
@@ -314,7 +323,7 @@
     </div>
 
     <div class="footer">
-        <p>&copy; 2024 Raporla.ai</p>
+        <p>© 2024 Raporla.ai</p>
     </div>
 
 </body>
